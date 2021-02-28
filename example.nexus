@@ -1,0 +1,12 @@
+#NEXUS
+begin data;
+dimensions ntax=5 nchar=20;
+format datatype=dna missing=? gap=-;
+matrix
+pop1 NCCCGACNAAGACACGATCG
+pop2 CCCCGACNAATACNCGATCG
+pop3 CCCCGACTANNNNACKATCG
+pop4 NCCCGACGAATANACGATCG
+pop5 NCCCGACKAATNGNCGATCG
+;
+end;
