@@ -24,18 +24,29 @@ print()
 # split outgroups
 outgroups = outgroups.split(",")
 
-# find ancestor
-ancestor = tree.get_common_ancestor(outgroups)
+# root function
+def root_tree(tree, outgroups): 
+    # if single outgroup providied, find node
+    if len(outgroups) == 1:
+        node = tree&outgroups[0]
+        print("Setting root")
+        tree.set_outgroup(node)
+        print(tree)
+    else:
+        # else, find ancestor
+        ancestor = tree.get_common_ancestor(outgroups)
+        # check if ancestor is already the current root
+        # else, root on ancestor
+        if tree == ancestor:
+            print("MRCA of outgroups is the current root node")
+        else:
+            print("Setting root")
+            tree.set_outgroup(ancestor)
+            print(tree)
 
-# check if ancestor is already the current root
-# if not, root on ancestor
-if tree == ancestor:
-    print("MRCA of outgroups is the current root node")
-else:
-    print("Setting root")
-    tree.set_outgroup(ancestor)
-    print("Rooted tree:")
-    print(tree)
+
+# run function to root tree
+root_tree(tree, outgroups)
 
 # write outfile
 print()
