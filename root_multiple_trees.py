@@ -4,15 +4,13 @@ import os
 from ete3 import Tree
 
 # run as
-# root_multiple_trees.py input_file output_file outgroup1,outgroup2,etc
+# root_multiple_trees.py input_file file_ending output_file outgroup1,outgroup2,etc
 
 # input agruments
 input_file  = sys.argv[1]
-output_file = sys.argv[2]
-outgroups   = sys.argv[3]
-
-# assume files end with ".newick"
-file_ending = ".newick"
+file_ending = sys.argv[2]
+output_file = sys.argv[3]
+outgroups   = sys.argv[4]
 
 # mk output dir if not already present
 if not os.path.exists(output_file):
