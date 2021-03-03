@@ -4,7 +4,7 @@ Example python scripts for working with bioinformatic data
 Print read lengths from a sequence file
 ```
 # requires SeqIO
-# python read_lengths.py example.fasta fasta
+# python read_lengths.py input_file format
 python read_lengths.py example.fasta fasta
 ```
 
