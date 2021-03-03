@@ -1,9 +1,10 @@
 # Example_python_scripts
-Example python scripts for working with bioinfomratic data
+Example python scripts for working with bioinformatic data
 
 Print read lengths from a sequence file
 ```
 # requires SeqIO
+# python read_lengths.py example.fasta fasta
 python read_lengths.py example.fasta fasta
 ```
 
