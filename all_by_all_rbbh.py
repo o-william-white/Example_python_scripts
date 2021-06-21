@@ -6,6 +6,7 @@ from Bio.Blast.Applications import NcbiblastnCommandline
 
 # get input fasta
 input_fasta = sys.argv[1]
+nthreads = sys.argv[2]
 
 # makeblastdb
 makeblastdb_cline = NcbimakeblastdbCommandline(dbtype="nucl", input_file=input_fasta)
@@ -14,7 +15,7 @@ print('Cmd: "' + str(makeblastdb_cline) + '"')
 stdout, stderr = makeblastdb_cline()
 
 # blastn
-blastn_cline = NcbiblastnCommandline(task='blastn', query=input_fasta, db=input_fasta, out='blast_out.txt', outfmt=6, evalue='1e-20')
+blastn_cline = NcbiblastnCommandline(task='blastn', query=input_fasta, db=input_fasta, out='blast_out.txt', outfmt=6, evalue='1e-20', threads=nthreads)
 print('Running blastn search')
 print('Cmd: "' + str(blastn_cline) + '"')
 stdout, stderr = blastn_cline()
