@@ -28,5 +28,6 @@ python  root_multiple_trees.py  example_trees  .newick  example_trees_rooted  sa
 All-by-all reciprocal best blast hit
 ```
 # requires blast and python modules pandas Biopython
+# input is the input fasta and number of threads required by blastn
 python all_by_all_rbbh.py example_rbbh.fasta 1
 ```
