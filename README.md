@@ -24,3 +24,9 @@ Root multiple trees on a single sample or most recent ancestor of multiple sampl
 python  root_multiple_trees.py  example_trees  .newick  example_trees_rooted  sampleF
 python  root_multiple_trees.py  example_trees  .newick  example_trees_rooted  sampleF,sampleC
 ```
+
+All-by-all reciprocal best blast hit
+```
+# requires pandas and Biopython
+python all_by_all_rbbh.py example_rbbh.fasta
+```
