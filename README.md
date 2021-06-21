@@ -27,6 +27,6 @@ python  root_multiple_trees.py  example_trees  .newick  example_trees_rooted  sa
 
 All-by-all reciprocal best blast hit
 ```
-# requires pandas and Biopython
+# requires blast and python modules pandas Biopython
 python all_by_all_rbbh.py example_rbbh.fasta
 ```
