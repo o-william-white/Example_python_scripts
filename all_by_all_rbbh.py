@@ -31,9 +31,9 @@ blast.columns = headers
 # remove rows where the query hits itself
 blast = blast[blast.qseqid != blast.sseqid]
 
-# sort blast output by qseqid and evalue
+# sort blast output by qseqid and bitscore
 print('Filtering for best hits')
-blast = blast.sort_values(by=['qseqid', 'evalue'])
+blast = blast.sort_values(by=['qseqid', 'bitscore'], ascending=[True, False])
 
 # take the first blast hit per qseqid
 blast = blast.drop_duplicates('qseqid')
